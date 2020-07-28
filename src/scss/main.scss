@@ -1,0 +1,149 @@
+@import  './reset.scss';
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin buttonsStyling() {
+    &:hover {
+        color:cornflowerblue;
+    }
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@mixin tweetButton() {
+    margin: 10px;
+    background: cornflowerblue;
+    color: white;
+    font-size: 1rem;
+    font-weight: weight(medium);
+    text-align: center;
+    right: 5px;
+    bottom: 5px;
+    left: 10px;
+    vertical-align: middle;
+    text-align: center;
+    height: 35px;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 20px;
+    box-shadow:  2px 2px 5px blue;
+    hover {
+        color: red;
+    }
+    cursor: pointer;
+}
+
+body {
+    background: $primary-color;
+}
+
+.main {
+    background: $primary-color;
+    width : 80%;
+    margin: 0 auto;
+
+    .col1 {
+        @include flexCenter(column);
+        background: $column-color;
+        width: 20%;
+        padding: 5px;
+        float :left;
+        margin-top: 60px;
+
+        .col1-buttons{
+            @include buttonsStyling();
+        }
+
+        .tweet-button {
+           @include tweetButton();
+        }
+           
+    }
+
+    .col2 {
+        background: $column-color;
+        width: 50%;
+        height: 700px;
+        margin-left: 350px;
+        font-weight: weight(bold);
+
+        .new-tweet-input-area {
+            margin-top: 50px;
+            
+            .write-tweet { 
+            position: relative;
+            width: 75%;
+            margin-left: 90px;
+            height: 100px;
+            background-color: white;
+            border-radius: 15px;
+            border: 2px solid #98D8FF;
+            }
+            .tweet-toolbar-area {
+                margin-top: 10px;
+                position: relative;
+                margin-left: 100px;
+
+                .insert {
+                    @include buttonsStyling();
+                    color : #98D8FF;
+                    border-radius: 30px;
+                    border: 2px solid #98D8FF;
+                }
+            
+                .tweet-button {
+                    @include tweetButton();
+                    float: right;
+                }
+            }
+        }
+        .line-wrapper {
+            position: relative;
+            height: 10px;
+            background-color: cornflowerblue;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            flex-basis: auto;
+            box-sizing: border-box;
+        }
+
+        .newsfeed-area {
+            margin-top: 10px;
+        }
+    }
+
+    .col3 {
+        background: $column-color;
+        font-weight: weight(bold);
+        width: 20%;
+        flex-grow: auto;
+        margin-left: 1050px;
+
+        .search-tweet-div {
+            .search-tweet {
+                @include tweetButton();
+                background-color: $column-color;
+                width : 50%;
+                color: black;
+            }
+
+            .click {
+                @include tweetButton();
+                background-color: $column-color;
+                width : 20%;
+                color: black;
+            }
+        }
+    }
+}

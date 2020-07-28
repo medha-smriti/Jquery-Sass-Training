@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../js/index.js"></script>    
+    <title>Twitter UI</title>
+</head>
+<body>
+    <div class="main">
+        <div class="col1"> 
+            <div class="col1-buttons">
+                <span class="icon icon-home">
+                    <i class="fa fa-home"></i></span>
+                <span class="button-text" id="home-button"> Home</span>
+            </div>
+            <div class="col1-buttons">
+                <span class="icon icon-notification">
+                    <i class="fa fa-bell"></i>
+                </span>
+                <span class="button-text" id="notification-button"> # Notifications</span>
+            </div>
+            <div class="col1-buttons">
+                <span class="icon icon-message">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <span class="button-text"> Messages</span>
+            </div>
+            <div class="col1-buttons">
+                <span class="icon icon-profile">
+                    <i class="fa fa-profile"></i>
+                </span>
+                <span class="button-text">Profile</span>
+            </div>
+            <div class="col1-buttons">
+                <button class = "tweet-button">
+                    <span class="button-text" id="tweet">Tweet</span>
+                </button>               
+            </div>
+        </div>
+        <div class="col2"> 
+            Home
+            <form class="new-tweet-input-area" id="tweet-form">
+                <input class="write-tweet" id="write-tweet" placeholder="What's Happening?">
+                <div class="tweet-toolbar-area"> 
+                    <button class="insert">
+                        <i class="fa fa-image"></i>
+                    </button>
+                    <button class="insert">
+                        <i class="fa fa-gift"> </i>
+                    </button>
+                    <button class="insert">
+                        <i class="fa fa-bars"> </i>
+                    </button>
+                    <button class="insert">
+                        <i class="fa fa-smile"> </i>
+                    </button>
+                    <button class="insert">
+                        <i class="fa fa-calendar"> </i>
+                    </button>
+                    <button class="tweet-button" id="tweeting">
+                        Tweet
+                    </button>
+                </div>
+            </form>
+            <div class="line-wrapper">
+            </div>
+            <div class="newsfeed-area">
+                newsfeed area
+            </div>
+        </div>
+        <div class="col3">
+            <form class="search-tweet-div">
+                <input class="search-tweet" id="search" placeholder="Search Tweet">
+                <button class="click" id="clickSearch">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>           
+        </div>
+    </div>    
+</body>
+</html>
